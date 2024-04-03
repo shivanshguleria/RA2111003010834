@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 import requests,json
 from q1 import numbers
+from q2 import products
 app = FastAPI()
 
 
@@ -23,3 +24,4 @@ def get_auth_token():
 #     return {"message": "Hello World"}
 
 app.include_router(numbers.router)
+app.include_router(products.router)
